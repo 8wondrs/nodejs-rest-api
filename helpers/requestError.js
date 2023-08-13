@@ -7,6 +7,7 @@ const messages = {
 };
 
 const RequestError = (status, message = messages[status]) => {
+  console.log(status);
   const error = new Error(message);
   error.status = status;
   return error;
